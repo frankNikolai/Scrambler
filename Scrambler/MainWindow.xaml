@@ -1,0 +1,29 @@
+﻿<Window x:Class="Scrambler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scrambler"
+        mc:Ignorable="d"
+        Title="Шифратор" Height="250" Width="500" ResizeMode="NoResize">
+    <Grid Width="480" Height="215" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Black" >
+        <TextBlock Text="Зашифровывать\Расшифровывать" Width="320" Height="30" FontSize="20" Margin="0,10,150,0" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Top"  />
+        <TextBox x:Name="TxLine" TextWrapping="Wrap" Foreground="White" Background="#FF011736"  
+                 Width="320" Height="30" Margin="0,45,150,0" VerticalAlignment="Top" HorizontalAlignment="Right" 
+                 FontSize="20"/>
+        <ComboBox x:Name="ComboBoxMethodEncryptionAndDecryption" Height="30" Margin="346,45,10,140" FontSize="12" ToolTip="Выберете метод шифрования">
+            <ComboBoxItem IsSelected="true" Content="Зашифровать"/>
+            <ComboBoxItem Content="Расшифровать"/>
+        </ComboBox>
+
+        <TextBlock Text="Ключ:" Width="55" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Foreground="White"  Margin="10,84,0,0"/>
+        <TextBox x:Name="TxKey" TextWrapping="Wrap" Width="250" Height="30" Margin="0,85,150,0" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FF011736" Foreground="White"/>
+        <ComboBox x:Name="ComboBoxMethod" Height="30" FontSize="12" Margin="346,85,10,100" ToolTip="Выберете необходимый способ шифрования">
+            <ComboBoxItem IsSelected="true" Content="Код"/>
+            <ComboBoxItem Content="Код:очередность"/>
+            <ComboBoxItem Content="Код:сдвиг ASCII"/>
+        </ComboBox>
+        <Button x:Name="Start" Content="Начать" FontSize="20" BorderBrush="#FF011736" BorderThickness="2" Foreground="Green" Height="40" 
+                Margin="346,141,10,34" Background="{x:Null}" Click="Start_Click"/>
+    </Grid>
+</Window>
